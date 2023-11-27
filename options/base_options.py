@@ -57,6 +57,7 @@ class BaseOptions():
         parser.add_argument('--norm_type', type=int, default=1, help='1:my bug, 2:org')
         parser.add_argument('--use_th', action='store_true', help='th or th boundary')
         parser.add_argument('--th', type=float, default=0.5, help='1:my bug, 2:org')
+        parser.add_argument('--isTrain', type=bool, default=False)
 
         self.initialized = True
         return parser
