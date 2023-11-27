@@ -11,6 +11,9 @@ def find_model_using_name(model_name):
     # Given the option --model [modelname],
     # the file "models/modelname_model.py"
     # will be imported.
+    from models.inpaint_model import InpaintModel
+    return InpaintModel
+
     model_filename = "models." + model_name + "_model"
     modellib = importlib.import_module(model_filename)
 
