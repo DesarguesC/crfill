@@ -11,8 +11,6 @@ def find_model_using_name(model_name):
     # Given the option --model [modelname],
     # the file "models/modelname_model.py"
     # will be imported.
-    from models.inpaint_model import InpaintModel
-    return InpaintModel
 
     model_filename = "models." + model_name + "_model"
     modellib = importlib.import_module(model_filename)
@@ -41,6 +39,7 @@ def get_option_setter(model_name):
 
 def create_model(opt):
     model = find_model_using_name(opt.model)
+    print('class loaded')
     instance = model(opt)
     print("model [%s] was created" % (type(instance).__name__))
 
