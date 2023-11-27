@@ -1,5 +1,5 @@
 python demo.py \
-	--name objrmv \
+	--name objrmv\
 	--dataset_mode testimage \
 	--model inpaint \
 	--netG baseconv \
