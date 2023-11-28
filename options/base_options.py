@@ -87,6 +87,7 @@ class BaseOptions():
             dataset_option_setter = data.get_option_setter(dataset_mode_val)
             parser = dataset_option_setter(parser, self.isTrain)
         else:
+            pass
             dataset_mode = opt.dataset_mode
             dataset_option_setter = data.get_option_setter(dataset_mode)
             parser = dataset_option_setter(parser, self.isTrain)
